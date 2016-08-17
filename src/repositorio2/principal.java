@@ -27,18 +27,74 @@ public class principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jPanel2 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        txtvalor1 = new javax.swing.JTextField();
+        txtvalor2 = new javax.swing.JTextField();
+        txtresultado1 = new javax.swing.JTextField();
+        txtresultado2 = new javax.swing.JTextField();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 424, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 317, Short.MAX_VALUE)
         );
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(452, 0, -1, -1));
+
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setText("SUELDO Y COMISIONES ");
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, -1, -1));
+
+        jLabel2.setText("SUELDO BASE :");
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, -1));
+
+        jLabel3.setText("NUMERO DE HIJOS :");
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
+
+        jLabel4.setText("COMISION :");
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, -1, -1));
+
+        jLabel5.setText("SUELDO TOTAL: ");
+        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, -1, -1));
+
+        jButton1.setText("CALCULAR");
+        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, -1, -1));
+
+        jButton2.setText("BORRAR");
+        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, -1, -1));
+
+        txtvalor1.setText("jTextField1");
+        jPanel3.add(txtvalor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, -1, -1));
+
+        txtvalor2.setText("jTextField2");
+        jPanel3.add(txtvalor2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, -1, -1));
+
+        txtresultado1.setText("jTextField3");
+        jPanel3.add(txtresultado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, -1, -1));
+
+        txtresultado2.setText("jTextField4");
+        jPanel3.add(txtresultado2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, -1, -1));
+
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 330));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -79,5 +135,19 @@ public class principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JTextField txtresultado1;
+    private javax.swing.JTextField txtresultado2;
+    private javax.swing.JTextField txtvalor1;
+    private javax.swing.JTextField txtvalor2;
     // End of variables declaration//GEN-END:variables
 }
