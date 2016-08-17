@@ -9,7 +9,7 @@ package repositorio2;
  *
  * @author user
  */
-public class principal extends javax.swing.JPanel {
+public class principal extends javax.swing.JFrame {
 
     /**
      * Creates new form principal
@@ -27,128 +27,57 @@ public class principal extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        txtvalor1 = new javax.swing.JTextField();
-        txtvalor2 = new javax.swing.JTextField();
-        cmdcalcular = new javax.swing.JButton();
-        cmdborrar = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        txtresultado1 = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        txtresultado2 = new javax.swing.JTextField();
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setText("SUELDO DEL TRRABAJADOR Y COMISION");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, -1, -1));
-
-        jLabel2.setText("DIGITE SU SUELDO BASE:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
-
-        jLabel3.setText("DIGITE SU NUMERO DE HIJOS: ");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
-
-        txtvalor1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtvalor1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(txtvalor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, 90, 20));
-
-        txtvalor2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtvalor2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(txtvalor2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 90, 20));
-
-        cmdcalcular.setText("CALCULAR");
-        cmdcalcular.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmdcalcularActionPerformed(evt);
-            }
-        });
-        jPanel1.add(cmdcalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, -1, -1));
-
-        cmdborrar.setText("BORRAR");
-        cmdborrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmdborrarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(cmdborrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 320, -1, -1));
-
-        jLabel4.setText("SUELDO TOTAL: ");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 90, 20));
-        jPanel1.add(txtresultado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, 90, -1));
-
-        jLabel5.setText("COMISION POR HIJOS: ");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
-        jPanel1.add(txtresultado2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 190, 90, 20));
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 487, Short.MAX_VALUE)
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 373, Short.MAX_VALUE)
+            .addGap(0, 300, Short.MAX_VALUE)
         );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtvalor2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtvalor2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtvalor2ActionPerformed
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
 
-    private void txtvalor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtvalor1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtvalor1ActionPerformed
-
-    private void cmdcalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdcalcularActionPerformed
-      double valor1,sueldototal, valor2,comision;
-      String res;
-      
-      valor1 = Double.parseDouble(txtvalor1.getText());
-      valor2 = Double.parseDouble(txtvalor2.getText());
-      
-      comision = valor2 * 80000;
-      
-      sueldototal = valor1 + comision;
-      
-      
-      txtresultado1.setText(String.valueOf(valor1));
-       txtresultado2.setText(String.valueOf(valor2));
-      
-      
-    }//GEN-LAST:event_cmdcalcularActionPerformed
-
-    private void cmdborrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdborrarActionPerformed
-        txtvalor1.setText("");
-        txtvalor2.setText("");
-        txtresultado1.setText("");
-        txtresultado2.setText("");
-        
-        txtvalor1.requestFocusInWindow();
-    }//GEN-LAST:event_cmdborrarActionPerformed
-
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new principal().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton cmdborrar;
-    private javax.swing.JButton cmdcalcular;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField txtresultado1;
-    private javax.swing.JTextField txtresultado2;
-    private javax.swing.JTextField txtvalor1;
-    private javax.swing.JTextField txtvalor2;
     // End of variables declaration//GEN-END:variables
 }
