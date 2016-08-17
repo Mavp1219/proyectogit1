@@ -76,11 +76,11 @@ public class principal extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setText("COMISION :");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 80, 30));
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 80, 30));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("SUELDO TOTAL: ");
-        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 110, 20));
+        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 110, 20));
 
         jButton1.setText("CALCULAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -88,7 +88,7 @@ public class principal extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, -1, -1));
+        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, -1, -1));
 
         jButton2.setText("BORRAR");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -96,17 +96,17 @@ public class principal extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, -1, -1));
-        jPanel3.add(txtvalor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 130, 20));
-        jPanel3.add(txtvalor2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, 130, 20));
+        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, -1, -1));
+        jPanel3.add(txtvalor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 130, 30));
+        jPanel3.add(txtvalor2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 130, 30));
 
         txtresultado1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtresultado1ActionPerformed(evt);
             }
         });
-        jPanel3.add(txtresultado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, 130, -1));
-        jPanel3.add(txtresultado2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 130, 20));
+        jPanel3.add(txtresultado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, 130, 30));
+        jPanel3.add(txtresultado2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 220, 130, 30));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 340));
 
