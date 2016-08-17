@@ -77,27 +77,64 @@ public class principal extends javax.swing.JFrame {
         jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, -1, -1));
 
         jButton1.setText("CALCULAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, -1, -1));
 
         jButton2.setText("BORRAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, -1, -1));
+        jPanel3.add(txtvalor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, 90, -1));
+        jPanel3.add(txtvalor2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, 90, -1));
 
-        txtvalor1.setText("jTextField1");
-        jPanel3.add(txtvalor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, -1, -1));
-
-        txtvalor2.setText("jTextField2");
-        jPanel3.add(txtvalor2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, -1, -1));
-
-        txtresultado1.setText("jTextField3");
-        jPanel3.add(txtresultado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, -1, -1));
-
-        txtresultado2.setText("jTextField4");
-        jPanel3.add(txtresultado2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, -1, -1));
+        txtresultado1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtresultado1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(txtresultado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, 130, -1));
+        jPanel3.add(txtresultado2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 120, -1));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 330));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtresultado1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtresultado1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtresultado1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        double valor1, valor2, comision,sueldot;
+        String res;
+         
+        valor1 = Double.parseDouble(txtvalor1.getText());
+        valor2 = Double.parseDouble(txtvalor2.getText());
+        
+        comision = valor2 * 80000;
+        
+        sueldot = valor1 + comision;
+        
+       txtresultado1.setText(String.valueOf(comision));
+       txtresultado2.setText(String.valueOf(sueldot));
+       
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+       txtvalor1.setText("");
+       txtvalor2.setText("");
+       txtresultado1.setText("");
+       txtresultado2.setText("");
+       
+       txtvalor1.requestFocusInWindow();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
