@@ -64,19 +64,23 @@ public class principal extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 102, 255));
         jLabel1.setText("SUELDO Y COMISIONES ");
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, 190, 30));
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 190, 30));
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("SUELDO BASE :");
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 130, 20));
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("NUMERO DE HIJOS :");
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 124, 130, 20));
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setText("COMISION :");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 70, 30));
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 80, 30));
 
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("SUELDO TOTAL: ");
-        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 110, 20));
+        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 110, 20));
 
         jButton1.setText("CALCULAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -93,18 +97,18 @@ public class principal extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, -1, -1));
-        jPanel3.add(txtvalor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, 90, -1));
-        jPanel3.add(txtvalor2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 90, -1));
+        jPanel3.add(txtvalor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 130, 20));
+        jPanel3.add(txtvalor2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, 130, 20));
 
         txtresultado1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtresultado1ActionPerformed(evt);
             }
         });
-        jPanel3.add(txtresultado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 130, -1));
-        jPanel3.add(txtresultado2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 120, -1));
+        jPanel3.add(txtresultado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, 130, -1));
+        jPanel3.add(txtresultado2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 130, 20));
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 330));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 340));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
