@@ -5,6 +5,8 @@
  */
 package repositorio2;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author user
@@ -35,7 +37,7 @@ public class principal extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        cmdcalcular = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         txtvalor1 = new javax.swing.JTextField();
         txtvalor2 = new javax.swing.JTextField();
@@ -68,7 +70,7 @@ public class principal extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("SUELDO BASE :");
-        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 130, 20));
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 130, 30));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("NUMERO DE HIJOS :");
@@ -82,13 +84,13 @@ public class principal extends javax.swing.JFrame {
         jLabel5.setText("SUELDO TOTAL: ");
         jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 110, 20));
 
-        jButton1.setText("CALCULAR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        cmdcalcular.setText("CALCULAR");
+        cmdcalcular.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                cmdcalcularActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, -1, -1));
+        jPanel3.add(cmdcalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, -1, -1));
 
         jButton2.setText("BORRAR");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -97,7 +99,19 @@ public class principal extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, -1, -1));
+
+        txtvalor1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtvalor1KeyTyped(evt);
+            }
+        });
         jPanel3.add(txtvalor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 130, 30));
+
+        txtvalor2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtvalor2KeyTyped(evt);
+            }
+        });
         jPanel3.add(txtvalor2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 130, 30));
 
         txtresultado1.setEditable(false);
@@ -120,29 +134,68 @@ public class principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtresultado1ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        double valor1, valor2, comision,sueldot;
-         
-        valor1 = Double.parseDouble(txtvalor1.getText());
-        valor2 = Double.parseDouble(txtvalor2.getText());
+    private void cmdcalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdcalcularActionPerformed
+        double valor1 = 0, valor2 = 0, comision, sueldot;
+        String res;
         
-        comision = valor2 * 80000;
-        
-        sueldot = valor1 + comision;
-        
-       txtresultado1.setText(String.valueOf(comision));
-       txtresultado2.setText(String.valueOf(sueldot));
-       
-    }//GEN-LAST:event_jButton1ActionPerformed
+             txtresultado1.setText("");
+             txtresultado2.setText("");
+        if (txtvalor1.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, " Digite por favor el valor 1", "Error", JOptionPane.ERROR_MESSAGE);
+            txtvalor1.requestFocusInWindow();
+        } else if (txtvalor2.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Digite por favor el valor 2", "Error", JOptionPane.ERROR_MESSAGE);
+            txtvalor2.requestFocusInWindow();
+        } else {
+            
+            if (valor1 == 0 && valor2  == 0){
+                JOptionPane.showMessageDialog(this, "No se permite el numero 0", "Error", JOptionPane.ERROR_MESSAGE);
+                txtvalor1.requestFocusInWindow();
+            } 
+            
+           
+            
+            valor1 = Double.parseDouble(txtvalor1.getText());
+            valor2 = Double.parseDouble(txtvalor2.getText());
+
+            comision = valor2 * 80000;
+
+            sueldot = valor1 + comision;
+            
+
+
+            txtresultado1.setText(String.valueOf(comision));
+            txtresultado2.setText(String.valueOf(sueldot));
+        }
+
+
+    }//GEN-LAST:event_cmdcalcularActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       txtvalor1.setText("");
-       txtvalor2.setText("");
-       txtresultado1.setText("");
-       txtresultado2.setText("");
-       
-       txtvalor1.requestFocusInWindow();
+        txtvalor1.setText("");
+        txtvalor2.setText("");
+        txtresultado1.setText("");
+        txtresultado2.setText("");
+
+        txtvalor1.requestFocusInWindow();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void txtvalor1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtvalor1KeyTyped
+        char c=evt.getKeyChar();
+        
+        if(!Character.isDigit(c)){
+            getToolkit().beep();
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtvalor1KeyTyped
+
+    private void txtvalor2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtvalor2KeyTyped
+        char c=evt.getKeyChar();
+        if(!Character.isDigit(c)){
+            getToolkit().beep();;
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtvalor2KeyTyped
 
     /**
      * @param args the command line arguments
@@ -180,7 +233,7 @@ public class principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton cmdcalcular;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
