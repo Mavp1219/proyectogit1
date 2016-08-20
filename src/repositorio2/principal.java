@@ -147,27 +147,28 @@ public class principal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Digite por favor el valor 2", "Error", JOptionPane.ERROR_MESSAGE);
             txtvalor2.requestFocusInWindow();
         } else {
-            
-             valor1 = Double.parseDouble(txtvalor1.getText());
+
+            valor1 = Double.parseDouble(txtvalor1.getText());
             valor2 = Double.parseDouble(txtvalor2.getText());
-            
-            if(valor1 == 0){
-                JOptionPane.showMessageDialog(this, "Ingrese un sueldo diferente de 0", "Error" ,JOptionPane.ERROR_MESSAGE);
+
+            if (valor1 == 0) {
+                JOptionPane.showMessageDialog(this, "Ingrese un sueldo diferente de 0", "Error", JOptionPane.ERROR_MESSAGE);
                 txtvalor1.requestFocusInWindow();
                 txtvalor1.selectAll();
-            } else if(valor2 == 0){
-                JOptionPane.showMessageDialog(this, "Debe tener hijos para tener comision", "Error" ,JOptionPane.ERROR_MESSAGE);
+            } else if (valor2 == 0) {
+                JOptionPane.showMessageDialog(this, "Debe tener hijos para tener comision", "Error", JOptionPane.ERROR_MESSAGE);
                 txtvalor2.requestFocusInWindow();
                 txtvalor2.selectAll();
+            } else {
+                comision = valor2 * 80000;
+
+                sueldot = valor1 + comision;
+
+                txtresultado1.setText(String.valueOf(comision));
+                txtresultado2.setText(String.valueOf(sueldot));
+
             }
-           
 
-            comision = valor2 * 80000;
-
-            sueldot = valor1 + comision;
-
-            txtresultado1.setText(String.valueOf(comision));
-            txtresultado2.setText(String.valueOf(sueldot));
         }
 
 
