@@ -143,9 +143,11 @@ public class principal extends javax.swing.JFrame {
         if (txtvalor1.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(this, " Digite por favor el valor 1", "Error", JOptionPane.ERROR_MESSAGE);
             txtvalor1.requestFocusInWindow();
+            txtvalor1.selectAll();
         } else if (txtvalor2.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Digite por favor el valor 2", "Error", JOptionPane.ERROR_MESSAGE);
             txtvalor2.requestFocusInWindow();
+            txtvalor2.selectAll();
         } else {
 
             valor1 = Double.parseDouble(txtvalor1.getText());
