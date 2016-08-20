@@ -149,7 +149,7 @@ public class principal extends javax.swing.JFrame {
         } else {
             
             if (valor1 == 0 && valor2  == 0){
-                JOptionPane.showMessageDialog(this, "No se permite el numero 0", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Tiene que tener un hijo para tener comision", "Error", JOptionPane.ERROR_MESSAGE);
                 txtvalor1.requestFocusInWindow();
             } 
             
