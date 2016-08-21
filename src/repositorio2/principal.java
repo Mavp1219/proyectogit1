@@ -161,7 +161,8 @@ public class principal extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Debe tener hijos para tener comision", "Error", JOptionPane.ERROR_MESSAGE);
                 txtvalor2.requestFocusInWindow();
                 txtvalor2.selectAll();
-            } else {
+            }
+            {
                 comision = valor2 * 80000;
 
                 sueldot = valor1 + comision;
